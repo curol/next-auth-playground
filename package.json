@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "description": "NextAuth.js example with Prisma",
+  "repository": "https://github.com/curol/next-auth-example.git",
+  "homepage": "https://next-auth-example.curol.dev",
+  "scripts": {
+    "dev": "next",
+    "prebuild": "pnpm prisma:generate",
+    "build": "pnpm prebuild && next build",
+    "start": "next start",
+    "predev": "pnpm prisma:generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:deploy": "prisma migrate deploy",
+    "prisma:push":"prisma db push",
+    "studio": "prisma studio"
+  },
+  "author": "Crash Curatolo <crash@curol.dev>",
+  "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.6",
+    "@prisma/client": "^4.13.0",
+    "next": "latest",
+    "next-auth": "^4.22.1",
+    "nodemailer": "^6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17",
+    "@types/react": "^18.0.15",
+    "prisma": "^4.13.0",
+    "typescript": "^4"
+  }
+}

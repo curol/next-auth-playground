@@ -1,0 +1,17 @@
+{
+    "name": "next-auth-example",
+    "image": "ghcr.io/curol/devcontainers/js-pnpm:latest",
+    "remoteUser": "vscode",
+    "forwardPorts": [
+      3000,
+      3001,
+      9229
+    ],
+    "mounts": [
+        "source=commandhistory,target=/workspaces/commandhistory,type=volume"
+      ],
+      // For remote host
+      "workspaceMount": "source=${localWorkspaceFolderBasename},target=/workspaces/${localWorkspaceFolderBasename},type=volume",
+      "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+      "onCreateCommand": "sudo chown -R vscode:vscode /workspaces || true"
+}
